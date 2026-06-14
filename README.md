@@ -113,21 +113,33 @@ Reviewed Okta logs to identify:
 * Authentication events
 * User activity
 
-Architecture Diagram
+## Architecture Diagram
 
-Users
-|
-v
-Okta (Identity Provider)
-|
-+–> Groups
-|
-+–> Authentication
-|
-+–> SAML Federation
-|
-v
-Salesforce (Service Provider)
+```text
+Users → Okta → Groups → SAML SSO → Salesforce → Audit Logs
+```
+
+![IAM Architecture Diagram](images/iam-architecture.png)
+
+### Authentication Flow
+
+1. Users authenticate to Okta.
+2. Okta manages identities and group memberships.
+3. Groups determine application access permissions.
+4. Okta uses SAML 2.0 to provide Single Sign-On (SSO).
+5. Salesforce trusts Okta as the Identity Provider (IdP).
+6. Authentication and access events are recorded in audit logs.
+
+### Components
+
+| Component | Purpose |
+|------------|---------|
+| Users | End users requesting access |
+| Okta | Identity Provider (IdP) |
+| Groups | Role-Based Access Control (RBAC) |
+| SAML SSO | Authentication federation |
+| Salesforce | Service Provider (SP) |
+| Audit Logs | Security monitoring and compliance |
 
 Skills Demonstrated
 
