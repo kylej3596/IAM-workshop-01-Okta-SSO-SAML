@@ -115,9 +115,7 @@ Reviewed Okta logs to identify:
 
 ## Architecture Diagram
 
-## Architecture Diagram
-
-![IAM Architecture](PASTE_THE_GITHUB_IMAGE_URL_HERE)
+![IAM Architecture](https://github.com/kylej3596/IAM-workshop-01-Okta-SSO-SAML/blob/main/iam%20diagram.PNG?raw=true)
 
 Skills Demonstrated
 
